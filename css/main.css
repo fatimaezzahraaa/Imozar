@@ -175,9 +175,9 @@ ul {
   list-style: none; }
 
 header.navigation .navigation-wrapper {
-  -webkit-transition: background ease-in-out 500ms;
-  -o-transition: background ease-in-out 500ms;
-  transition: background ease-in-out 500ms;
+  -webkit-transition: background ease-in-out 350ms;
+  -o-transition: background ease-in-out 350ms;
+  transition: background ease-in-out 350ms;
   position: absolute;
   overflow: hidden;
   top: 0;
@@ -189,7 +189,7 @@ header.navigation .navigation-wrapper {
     -webkit-transition: all ease-in-out 350ms;
     -o-transition: all ease-in-out 350ms;
     transition: all ease-in-out 350ms;
-    padding: 4rem 0 1rem 0; }
+    padding: 2rem 0 0 0; }
     header.navigation .navigation-wrapper .navbar ul.navbar-list {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -226,9 +226,9 @@ header.navigation .navigation-wrapper {
           width: 0;
           height: .2rem;
           background: #dddddd;
-          -webkit-transition: all ease-in-out 250ms;
-          -o-transition: all ease-in-out 250ms;
-          transition: all ease-in-out 250ms; }
+          -webkit-transition: all ease-in-out 350ms;
+          -o-transition: all ease-in-out 350ms;
+          transition: all ease-in-out 350ms; }
         header.navigation .navigation-wrapper .navbar ul.navbar-list li a:hover::before {
           width: calc(60% - 2rem); }
       header.navigation .navigation-wrapper .navbar ul.navbar-list li a.logo-anchor {
@@ -242,10 +242,11 @@ header.navigation .navigation-wrapper {
 
 header.navigation .navigation-moving {
   position: fixed;
-  -webkit-transition: all ease-in-out 500ms;
-  -o-transition: all ease-in-out 500ms;
-  transition: all ease-in-out 500ms;
-  background: #fff; }
+  -webkit-transition: all ease-in-out 350ms;
+  -o-transition: all ease-in-out 350ms;
+  transition: all ease-in-out 350ms;
+  background: #fff;
+  border: 1px solid #dddddd; }
   header.navigation .navigation-moving .navbar {
     -webkit-transition: all ease-in-out 350ms;
     -o-transition: all ease-in-out 350ms;
@@ -263,7 +264,10 @@ header.navigation .navigation-moving {
 
 section.home {
   height: 100vh;
-  background: #dddddd url("../img/home-bg.jpg") bottom/cover;
+  background: #dddddd url("../img/home-bg.jpg");
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: 0px;
   -webkit-transition: initial;
   -o-transition: initial;
   transition: initial;

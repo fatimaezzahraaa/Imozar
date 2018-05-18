@@ -1374,7 +1374,6 @@ th {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box
-    transition: all ease-in-out 350ms;
 }
 
 :after,
@@ -1382,7 +1381,6 @@ th {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box
-    transition: all ease-in-out 350ms;
 }
 
 html {
