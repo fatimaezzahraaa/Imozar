@@ -2,7 +2,7 @@ $(document).ready(function() {
 
     var scrollLink = $('.scroll');
 
-    // Smooth scrolling
+    // Smooth links scrolling
     scrollLink.click(function(e) {
         e.preventDefault();
         $('body, html').animate({
@@ -16,12 +16,13 @@ $(document).ready(function() {
 
 
         // Handle navigation class
-        if (scrollbarLocation >= 650) {
+        if (scrollbarLocation >= 250) {
             $('.navigation-wrapper').addClass('navigation-moving');
         } else {
             $('.navigation-wrapper').removeClass('navigation-moving');
         }
 
+        // Handle active class
         scrollLink.each(function() {
             var sectionOffset = $(this.hash).offset().top;
 
@@ -31,7 +32,7 @@ $(document).ready(function() {
             }
 
         })
-
+        
     });
-
+    
 })
