@@ -234,7 +234,8 @@ header.navigation .navigation-wrapper {
       header.navigation .navigation-wrapper .navbar ul.navbar-list li a.logo-anchor {
         color: #fff;
         text-transform: none;
-        font-size: 1.5em; }
+        font-size: 1.5em;
+        font-weight: 700; }
         header.navigation .navigation-wrapper .navbar ul.navbar-list li a.logo-anchor::before {
           content: none; }
       header.navigation .navigation-wrapper .navbar ul.navbar-list .active a::before {
