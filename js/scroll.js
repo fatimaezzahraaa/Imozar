@@ -7,7 +7,7 @@ $(document).ready(function() {
         e.preventDefault();
         $('body, html').animate({
             scrollTop: $(this.hash).offset().top
-        }, 1500)
+        }, 1600)
     });
 
     // Active link switch
@@ -16,7 +16,7 @@ $(document).ready(function() {
 
 
         // Handle navigation class
-        if (scrollbarLocation >= 250) {
+        if (scrollbarLocation >= 200) {
             $('.navigation-wrapper').addClass('navigation-moving');
         } else {
             $('.navigation-wrapper').removeClass('navigation-moving');
