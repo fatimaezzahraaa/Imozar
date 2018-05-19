@@ -175,7 +175,7 @@ ul {
   list-style: none; }
 
 header.navigation .navigation-wrapper {
-  position: fixed;
+  position: absolute;
   left: 0;
   right: 0;
   z-index: 99; }
@@ -226,7 +226,7 @@ header.navigation .navigation-wrapper {
         position: relative;
         color: #DDDDDD;
         text-decoration: none;
-        font-size: 1.25rem;
+        font-size: 1.35rem;
         padding: 1rem 1.5rem;
         text-transform: uppercase;
         letter-spacing: 1px;
@@ -320,6 +320,7 @@ header.navigation .navigation-wrapper {
               bottom: -.7rem; } }
 
 header.navigation .navigation-moving {
+  position: fixed;
   background: rgba(255, 255, 255, 0.97);
   -webkit-transition: all ease-in-out 350ms;
   -o-transition: all ease-in-out 350ms;

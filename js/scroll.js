@@ -7,11 +7,11 @@ $(document).ready(function() {
         e.preventDefault();
         $('body, html').animate({
             scrollTop: $(this.hash).offset().top
-        }, 1600)
+        }, 800)
     });
 
     // Active link switch
-    $(window).scroll(function() {
+    /*$(window).scroll(function() {
         var scrollbarLocation = $(this).scrollTop();
 
 
@@ -33,6 +33,6 @@ $(document).ready(function() {
 
         })
         
-    });
+    });*/
     
 })
