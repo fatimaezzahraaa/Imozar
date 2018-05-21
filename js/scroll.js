@@ -10,8 +10,8 @@ $(document).ready(function() {
         }, 800)
     });
 
-    // Active link switch
-    /*$(window).scroll(function() {
+ 
+    $(window).scroll(function() {
         var scrollbarLocation = $(this).scrollTop();
 
 
@@ -26,13 +26,13 @@ $(document).ready(function() {
         scrollLink.each(function() {
             var sectionOffset = $(this.hash).offset().top;
 
-            if (sectionOffset <= scrollbarLocation) {
+            if (sectionOffset <= scrollbarLocation + 140) {
                 $(this).parent().addClass('active');
                 $(this).parent().siblings().removeClass('active');
             }
 
         })
         
-    });*/
+    });
     
 })
