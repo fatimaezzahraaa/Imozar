@@ -3,7 +3,7 @@ $(function () {
     var $window = $(window);		//Window object
 
     var scrollTime = 1;			    //Scroll time
-    var scrollDistance = 700;		//Distance. Use smaller value for shorter scroll and greater value for longer scroll
+    var scrollDistance = 600;		//Distance. Use smaller value for shorter scroll and greater value for longer scroll
 
     $window.on("mousewheel DOMMouseScroll", function (e) {
 
