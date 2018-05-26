@@ -1,0 +1,206 @@
+header.navigation {
+
+  .navigation-wrapper {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 99;
+
+    .navigation-items {
+      display: flex;
+      padding: 3rem 0 2.2rem 0;
+      .navigation-logo {
+        flex-grow: 1;
+        a.logo-anchor {
+          color: $lightgray;
+          text-decoration: none;
+          line-height: 1;
+          font-size: 2rem;
+          font-weight: 700;
+          letter-spacing: 1px;
+        }
+      }
+  
+      .navigation-list {
+        @media (max-width: 850px) {
+          //display: none;
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 100%;
+          padding-top: 1rem;
+          background: rgba($color: $white, $alpha: .97);
+          transform: scale(1, 0);
+          transform-origin: top; 
+          transition: all ease-in-out 350ms;
+        }        
+        ul {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          li {
+            a {
+              position: relative;
+              color: $lightgray;
+              text-decoration: none;
+              font-size: 1.35rem;
+              padding: 1rem 1.5rem;
+              text-transform: uppercase;
+              letter-spacing: 1px;
+              //opacity: 0;
+              @media (max-width: 850px) {
+                opacity: 1;
+              }
+              transition: all ease-in-out 350ms;
+              &::before {
+                position: absolute;
+                content: '';
+                background: $lightgray;
+                height: .1rem;
+                width: 0;
+                bottom: -.1rem;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                transition: all ease-in-out 350ms;
+              }
+              @media (max-width: 850px) {
+                &::before {
+                  background: $black;                  
+                }
+              }
+              &:hover {
+                &::before {
+                  width: calc(100% - 5rem);
+                }
+              }
+            }
+            &.active {
+              a {
+                &::before {
+                  width: calc(100% - 5rem);
+                }
+              }
+            }
+          }
+          @media (max-width: 850px) {
+            display: flex;
+            flex-direction: column;
+            li {
+              margin-bottom: 2rem;
+              &:last-of-type {
+                margin-bottom: .2rem;
+              }
+              a {
+                color: $black;
+                &::before {
+                  color: $black;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .navigation-toggle {
+        padding-right: 2rem;
+        width: 2rem;
+        height: 2rem;
+        display: none;
+        @media (max-width: 850px) {
+          &:checked ~ .navigation-list {
+            //display: block;
+            transform: scale(1, 1);
+            a {
+              transition: all ease-in-out 350ms;
+              //opacity: 1;
+            }
+          }
+        }
+      }
+
+      .navigation-toggle-label {
+        display: none;
+        @media (max-width: 850px) {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          span {
+            position: relative;
+            display: block;
+            background: $lightgray;
+            border-radius: 2px;
+            height: .2rem;
+            width: 3rem;
+            &::before, &::after {
+              position: absolute;
+              content: '';
+              background: $lightgray;
+              border-radius: 2px;
+              height: .2rem;
+              width: 3rem;
+            }     
+            &::before {
+              top: -.7rem;
+            }     
+            &::after {
+              bottom: -.7rem;
+            }
+          }
+        }        
+      }
+    }
+  }
+
+  .navigation-moving {
+    position: fixed;
+    background: rgba($color: $white, $alpha: .97);
+    transition: all ease-in-out 350ms;
+    .navigation-items {
+      .navigation-logo {
+        a.logo-anchor {
+          color: $black;
+        }
+      }
+      .navigation-toggle {
+        // Later
+      }
+      .navigation-list {
+        ul {
+          li {
+            a {
+              color: $black;
+              &::before {
+                background: $black;
+              }
+              &:hover {
+                &::before {
+                  width: calc(100% - 5rem);
+                }
+              }
+            }
+            &.active {
+              a {
+                &::before {
+                  width: calc(100% - 5rem);
+                }
+              }
+            }
+          }
+        }
+      }
+      .navigation-toggle-label {
+        @media (max-width: 850px) {
+          span {
+            background: $black;
+            &::before,
+            &::after {
+              background: $black;
+            }
+          }
+        }
+      }
+    }
+  }
+}

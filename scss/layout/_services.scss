@@ -1,0 +1,146 @@
+.section-title {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 10rem 0;
+  h2 {
+    color: $primary;
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    &::before {
+      content: '';
+      position: absolute;
+      background: $primary;
+      left: .05em;
+      bottom: -.5em;
+      height: .06em;
+      width: 25%;
+      border-radius: 20px;
+    }
+  }
+}
+
+section.services {
+  background: $gray-bg;
+  padding-bottom: 11rem;
+  .services-title {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 10rem 0;
+    h2 {
+      position: relative;
+      display: inline-block;
+      margin: 0;
+      font-size: 3.5rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      &::before {
+        content: '';
+        position: absolute;
+        background: $primary;
+        left: .05em;
+        bottom: -.5em;
+        height: .06em;
+        width: 25%;
+        border-radius: 20px;
+      }
+    }
+  }
+  .services-cards {
+    .cards-card {
+      position: relative;
+      text-align: center;
+      &::before {
+        content: '';
+        position: absolute;
+        background: $lightgray;
+        width: 100%;
+        height: .1rem;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        bottom: -3.5rem;
+        border-radius: 5px;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        background: $lightgray;
+        width: .1rem;
+        height: 33%;
+        top: 0;
+        bottom: 0;
+        right: -1.5rem;
+        margin: auto 0;
+        border-radius: 5px;
+      }
+      &.four,
+      &.five,
+      &.six {
+        &::before {
+          width: 0;
+        }
+      }
+      &.three,
+      &.six {
+        &::after {
+          height: 0;
+        }
+      }
+      &:hover {
+        .card-icon {
+          i {
+            animation: rotate .5s ease-in-out forwards;
+          }
+        }
+      }
+      .card-icon {
+        font-size: 4.8rem;
+        line-height: 2;
+      }
+      .card-content {
+        h3 {
+          position: relative;
+          font-size: 1.8rem;
+          text-transform: uppercase;
+          font-weight: 700;
+          letter-spacing: 1px;
+          margin-bottom: 4rem;
+          &::before {
+            content: '';
+            position: absolute;
+            background: $primary;
+            width: 4rem;
+            height: .1rem;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            bottom: -2.2rem;
+            border-radius: 5px;
+          }
+        }
+        p {
+          color: $secondary;
+          font-size: 1.15em;
+          letter-spacing: 1px;
+          line-height: 1.7;
+          margin-bottom: 6rem;
+        }
+      }
+    }
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}

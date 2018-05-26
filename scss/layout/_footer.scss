@@ -1,0 +1,42 @@
+footer.footer {
+  background: $gray-bg;
+  text-align: center;
+  padding: 8rem 0;
+  a.footer-author {
+    text-decoration: none;
+    color: $black;
+    font-size: 2.25rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  .footer-social {
+    margin-top: 5rem;
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      li {
+        a {
+          font-size: 2rem;
+          color: $secondary;
+          padding: 1rem;
+          transition: all ease-in-out 350ms;
+          &:hover {
+            color: cyan;
+          }
+        }
+      }
+    }
+  }
+  .footer-copyright {
+    margin-top: 2rem;
+    padding-bottom: 2em;
+    .copyright-text {
+      font-size: 1.6rem;
+      letter-spacing: 1px;
+      @media(max-width: 500px) {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

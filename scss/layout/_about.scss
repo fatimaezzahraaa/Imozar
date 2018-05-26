@@ -1,0 +1,138 @@
+section.about {
+  .row {
+    margin: 11rem 0;
+  }
+  .home-about {      
+    h2 {
+      color: $primary;
+      font-size: 2em;
+      font-weight: 700;
+      margin-top: 2rem;
+      margin-bottom: 3rem;
+    }
+    p {
+      color: $primary;
+      font-size: 1.15em;
+      letter-spacing: 1px;
+      line-height: 1.7;
+      margin-bottom: 3rem;
+    }
+    .info {
+      margin-top: 0;
+      margin-bottom: 2rem;
+      ul {
+        li {
+          line-height: 1.5;
+          margin-bottom: 1rem;
+          font-size: 1.4rem;
+          letter-spacing: 1px;
+          color: $secondary;
+          font-family: 'Lato', sans-serif;
+          span {
+            color: $black;
+            margin-right: .2rem;
+            font-size: 1.4rem;
+            word-spacing: -2px;
+            font-weight: 700;
+            i {
+              margin-right: .5em;
+              color: $black;
+            }
+          }
+        }
+      }
+    }
+    ul.social-list {
+      display: flex;
+      li {
+        margin-right: 1rem;
+        a {
+          display: inline-block;
+          height: 38px;
+          width: 38px;
+          font-size: 1.8rem;
+          color: $black;
+          border: 1px solid $gray-2;
+          border-radius: 50%;
+          line-height: 36px;
+          text-align: center;
+          transition: all ease-in-out 350ms;
+          i {
+            color: $black;
+            transition: all ease-in-out 350ms;
+          }
+          &:hover {
+            background: $black;
+            border: 1px solid $black;
+            i {
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+  .home-skills {
+    margin-top: 3rem;
+    .prog-bar {
+      padding: 1.8rem 0;
+      display: flex;      
+      .bar-info {
+        width: 100%;
+        p.bar-text {
+          display: inline-block;
+          margin-left: .6rem;
+          margin-bottom: .5rem;
+          color: $black;
+          font-weight: 700; 
+          letter-spacing: 1px;
+          margin-top: 1rem;      
+        }
+        .bar-progress-counter {
+          float: right;
+          font-family: 'Lato', sans-serif;
+          margin-right: .6rem;
+          font-weight: 700;
+          color: $black;
+          margin-top: 1rem;
+        }
+        .bar-progress-illustration {
+          width: 100%;
+          height: .6rem;
+          background: $lightgray;
+          border-radius: 20px;
+          position: relative;
+          &::before {
+            content: '';
+            position: absolute;
+            background: $gray;
+            height: .6rem;
+            border-radius: 20px;
+            top: 0;
+            left: 0;
+          }
+        }
+        .html {
+          &::before {
+            width: 98%;
+          }
+        }
+        .photoshop {
+          &::before {
+            width: 92%;
+          }
+        }
+        .php {
+          &::before {
+            width: 86%;
+          }
+        }
+        .wordpress {
+          &::before {
+            width: 94%;
+          }
+        }
+      }
+    }
+  }
+}
