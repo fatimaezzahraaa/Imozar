@@ -36,7 +36,7 @@ function activateButton() {
 inputName.addEventListener('keyup', function checkName() {
     if (inputName.value.length <= 0) {     
         nameError.innerHTML = 'This field is required';
-        inputName.parentElement.classList.remove('success');
+        inputName.classList.remove('input-success');
         inputName.classList.add('input-fail');
         inputName.parentElement.classList.remove('success');
         inputName.parentElement.classList.add('fail');
