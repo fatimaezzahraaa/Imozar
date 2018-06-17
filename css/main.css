@@ -838,9 +838,22 @@ section.contact {
     -webkit-box-shadow: none;
     box-shadow: none;
     border: 1px solid #DDDDDD;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     outline: none; }
+    section.contact .contact-form .form-body .input-field.input-fail {
+      color: red;
+      border: 1px solid red; }
+    section.contact .contact-form .form-body .input-field.input-success {
+      color: green;
+      border: 1px solid green; }
+  section.contact .contact-form .form-body p.input-error {
+    color: red;
+    -webkit-transition: all ease-in-out 350ms;
+    -o-transition: all ease-in-out 350ms;
+    transition: all ease-in-out 350ms;
+    padding-left: 1.5rem; }
   section.contact .contact-form .form-body textarea.input-message {
+    margin-top: 1rem;
     resize: none;
     height: 15rem; }
   section.contact .contact-form .form-body button.form-button {
@@ -859,11 +872,85 @@ section.contact {
     -webkit-transition: all ease-in-out 350ms;
     -o-transition: all ease-in-out 350ms;
     transition: all ease-in-out 350ms; }
+    section.contact .contact-form .form-body button.form-button:disabled {
+      color: #333333;
+      background: #DDDDDD;
+      border: 1px solid #999;
+      cursor: not-allowed; }
+      section.contact .contact-form .form-body button.form-button:disabled:hover {
+        color: #333333;
+        background: #DDDDDD; }
     section.contact .contact-form .form-body button.form-button i {
       padding-right: 1rem; }
     section.contact .contact-form .form-body button.form-button:hover {
       color: #333333;
       background: #fff; }
+  section.contact .contact-form .form-body .form-input-name {
+    position: relative; }
+    section.contact .contact-form .form-body .form-input-name.success::before {
+      content: '';
+      position: absolute;
+      top: 2.1rem;
+      right: 3rem;
+      bottom: 0;
+      height: .8rem;
+      width: .8rem;
+      border-radius: 50%;
+      background: green; }
+    section.contact .contact-form .form-body .form-input-name.fail::before {
+      content: '';
+      position: absolute;
+      top: 2.1rem;
+      right: 3rem;
+      bottom: 0;
+      height: .8rem;
+      width: .8rem;
+      border-radius: 50%;
+      background: red; }
+  section.contact .contact-form .form-body .form-input-email {
+    position: relative; }
+    section.contact .contact-form .form-body .form-input-email.success::before {
+      content: '';
+      position: absolute;
+      top: 2.1rem;
+      right: 3rem;
+      bottom: 0;
+      height: .8rem;
+      width: .8rem;
+      border-radius: 50%;
+      background: green; }
+    section.contact .contact-form .form-body .form-input-email.fail::before {
+      content: '';
+      position: absolute;
+      top: 2.1rem;
+      right: 3rem;
+      bottom: 0;
+      height: .8rem;
+      width: .8rem;
+      border-radius: 50%;
+      background: red; }
+  section.contact .contact-form .form-body .form-input-message {
+    position: relative; }
+    section.contact .contact-form .form-body .form-input-message.success::before {
+      content: '';
+      position: absolute;
+      top: 2.1rem;
+      right: 3rem;
+      bottom: 0;
+      height: .8rem;
+      width: .8rem;
+      border-radius: 50%;
+      background: green; }
+    section.contact .contact-form .form-body .form-input-message.fail::before {
+      content: '';
+      position: absolute;
+      top: 2.1rem;
+      right: 3rem;
+      bottom: 0;
+      height: .8rem;
+      width: .8rem;
+      border-radius: 50%;
+      background: red; }
 
 footer.footer {
   background: #FAFAFA;

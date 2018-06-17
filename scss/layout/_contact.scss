@@ -44,10 +44,24 @@ section.contact {
         border-radius: 5px;
         box-shadow: none;
         border: 1px solid $lightgray;
-        margin-bottom: 3rem;
+        margin-bottom: 1rem;
         outline: none;
+        &.input-fail {
+          color: red;
+          border: 1px solid red;
+        }
+        &.input-success {
+          color: green;
+          border: 1px solid green;          
+        }
+      }
+      p.input-error {
+        color: red;
+        transition: all ease-in-out 350ms;
+        padding-left: 1.5rem;
       }
       textarea.input-message {
+        margin-top: 1rem;
         resize: none;
         height: 15rem;
       }
@@ -65,12 +79,111 @@ section.contact {
         background: $primary;
         font-weight: 700;
         transition: all ease-in-out 350ms;
+        &:disabled {
+          color: $primary;
+          background: $lightgray;
+          border: 1px solid #999;
+          cursor: not-allowed;
+          &:hover {
+            color: $primary;
+            background: $lightgray;
+          }
+        }
         i {
           padding-right: 1rem;
         }
         &:hover {
           color: $primary;
           background: $white;
+        }
+      }
+      .form-input-name {
+        position: relative;
+        &.success {
+          &::before {
+            content: '';
+            position: absolute;
+            top: 2.1rem;
+            right: 3rem;
+            bottom: 0;
+            height: .8rem;
+            width: .8rem;
+            border-radius: 50%;
+            background: green;
+          }
+        }
+        &.fail {
+          &::before {
+            content: '';
+            position: absolute;
+            top: 2.1rem;
+            right: 3rem;
+            bottom: 0;
+            height: .8rem;
+            width: .8rem;
+            border-radius: 50%;
+            background: red;
+          }
+        }
+      }
+      .form-input-email {
+        position: relative;
+        &.success {
+          &::before {
+            content: '';
+            position: absolute;
+            top: 2.1rem;
+            right: 3rem;
+            bottom: 0;
+            height: .8rem;
+            width: .8rem;
+            border-radius: 50%;
+            background: green;
+          }
+        }
+
+        &.fail {
+          &::before {
+            content: '';
+            position: absolute;
+            top: 2.1rem;
+            right: 3rem;
+            bottom: 0;
+            height: .8rem;
+            width: .8rem;
+            border-radius: 50%;
+            background: red;
+          }
+        }
+      }
+      .form-input-message {
+        position: relative;
+        &.success {
+          &::before {
+            content: '';
+            position: absolute;
+            top: 2.1rem;
+            right: 3rem;
+            bottom: 0;
+            height: .8rem;
+            width: .8rem;
+            border-radius: 50%;
+            background: green;
+          }
+        }
+
+        &.fail {
+          &::before {
+            content: '';
+            position: absolute;
+            top: 2.1rem;
+            right: 3rem;
+            bottom: 0;
+            height: .8rem;
+            width: .8rem;
+            border-radius: 50%;
+            background: red;
+          }
         }
       }
     }
